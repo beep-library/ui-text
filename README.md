@@ -21,6 +21,33 @@ UIText.Builder()
   .build()
 ```
 
+### XML에서 사용
+
+```xml
+<TextView
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  app:layout_constraintBottom_toBottomOf="parent"
+  app:layout_constraintEnd_toEndOf="parent"
+  app:layout_constraintStart_toStartOf="parent"
+  app:layout_constraintTop_toTopOf="parent"
+  app:setUIText="@{vm.uiText}"
+  tools:text="스타벅스에서 사용 가능한 기프티콘이 3개 있어요" />
+```
+
+```kotlin
+
+@BindingAdapter("setUIText")
+fun TextView.setUIText(uiText: UIText?) {
+    Log.d("TAG", "setUIText: $uiText")
+    if (uiText == null) return
+    if (uiText.clickable) {
+        movementMethod = LinkMovementMethod()
+    }
+    text = uiText.asString(context)
+}
+```
+
 ### 정리
 
 - Builder 패턴을 사용해서 구현이 됐다.
