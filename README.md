@@ -1,5 +1,8 @@
 <img src="https://user-images.githubusercontent.com/53300830/212788580-e17cd12a-390b-4584-9d82-f3874c1bc36d.png" width="800">
 
+[UISpan.kt](https://github.com/beep-library/ui-text/blob/main/app/src/main/java/com/android/myapplication/UISpan.kt)  
+[UIText.kt](https://github.com/beep-library/ui-text/blob/main/app/src/main/java/com/android/myapplication/UIText.kt)
+
 ## 사용 방법
 
 ### 일반 텍스트 1개만 넣을 때
