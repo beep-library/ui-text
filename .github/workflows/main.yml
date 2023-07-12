@@ -4,3 +4,6 @@ jobs:
     runs-on: [self-hosted]
     steps:
       - run: echo "test runner"
+      - uses: actions/checkout@v3
+        with: 
+          lfs: true  
